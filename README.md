@@ -6,8 +6,8 @@
 
 
 <br>
-<img src="https://komarev.com/ghpvc/?username=gamersnsp&style=flat-square" alt="danascape" /><br>
-<img src="https://github-readme-stats.vercel.app/api?username=gamersnsp&show_icons=true&count_private=true&title_color=333&icon_color=333" alt="saalim" />
+<img src="https://komarev.com/ghpvc/?username=gamersnsp&style=flat-square" alt="gamersnsp" /><br>
+<img src="https://github-readme-stats.vercel.app/api?username=gamersnsp&show_icons=true&count_private=true&title_color=333&icon_color=333" alt="Neeraj Singh" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?layout=compact&username=gamersnsp" />
 <br>
 
