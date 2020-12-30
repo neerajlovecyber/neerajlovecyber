@@ -69,7 +69,7 @@
   <img src="https://profile-counter.glitch.me/gamersnsp/count.svg" />
 </p>
 
-📕 **Latest Blog Posts**
+## 📕 **Latest Blog Posts** 👨‍💻
 <!-- BLOG-POST-LIST:START -->
 - [5 best Linux Distros out there for Beginners](https://www.codersnoon.com/2020/12/5-best-linux-distros-for-beginners.html)
 - [Linux basic for cyber security students Part 1](https://www.codersnoon.com/2020/11/linux-basic-for-cyber-security-students.html)
