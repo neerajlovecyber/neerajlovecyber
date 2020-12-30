@@ -11,8 +11,8 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?layout=compact&username=gamersnsp" />
 <br>
 
-  <a href="https://twitter.com/danascape">
-    <img align="left" alt="Shubhamdeep Jha | Twitter" width="26px" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Twitter.svg" />
+  <a href="https://twitter.com/CodersNoon">
+    <img align="left" alt="Neeraj Singh | Twitter" width="26px" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Twitter.svg" />
   </a>
   <a href="mailto:nirmalapanghal@gmail.com">
     <img align="left" alt="Neeraj Singh | Gmail" width="26px" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Gmail.svg" />
