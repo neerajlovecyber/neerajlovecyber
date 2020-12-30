@@ -74,7 +74,7 @@
 - [5 best Linux Distros out there for Beginners](https://www.codersnoon.com/2020/12/5-best-linux-distros-for-beginners.html)
 - [Linux basic for cyber security students Part 1](https://www.codersnoon.com/2020/11/linux-basic-for-cyber-security-students.html)
 - [How to learn linux ? Getting started in cybersecurity !](https://www.codersnoon.com/2020/11/how-to-learn-linux-getting-started-in-cybersecurity.html)
-- [Which programming languages used for creating aarogya Setu app?](https://www.codersnoon.com/2020/10/programming languages used for creating aarogya Setu.html)
+- [Which programming languages used for creating aarogya Setu app?](https://www.codersnoon.com/2020/10/programming-languages-used-for-creating-aarogya-Setu.html)
 - [Lpu crypto ctf write-up 2020](https://www.codersnoon.com/2020/10/lpu-crypto-ctf-write-up-2020.html)
 <!-- BLOG-POST-LIST:END -->
 
