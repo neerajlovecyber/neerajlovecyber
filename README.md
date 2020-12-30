@@ -62,18 +62,14 @@
 
 
 
+
+
 <p align="center"> 
   Visitor count<br>
   <img src="https://profile-counter.glitch.me/gamersnsp/count.svg" />
 </p>
 
-<h2  align="center">📫 Reach me on</h2>
-<p align="center">
-  <a target="_blank"href="https://www.linkedin.com/in/neeraj-singh-950a4b1a5"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a target="_blank"href="https://twitter.com/CodersNoon"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:nirmalapanghal@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-### Blog posts 👩‍💻👨‍💻📙
+📕 **Latest Blog Posts**
 <!-- BLOG-POST-LIST:START -->
 - [5 best Linux Distros out there for Beginners](https://www.codersnoon.com/2020/12/5-best-linux-distros-for-beginners.html)
 - [Linux basic for cyber security students Part 1](https://www.codersnoon.com/2020/11/linux-basic-for-cyber-security-students.html)
@@ -81,3 +77,11 @@
 - [Which programming languages used for creating aarogya Setu app?](https://www.codersnoon.com/2020/10/programming languages used for creating aarogya Setu.html)
 - [Lpu crypto ctf write-up 2020](https://www.codersnoon.com/2020/10/lpu-crypto-ctf-write-up-2020.html)
 <!-- BLOG-POST-LIST:END -->
+
+
+<h2  align="center">📫 Reach me on</h2>
+<p align="center">
+  <a target="_blank"href="https://www.linkedin.com/in/neeraj-singh-950a4b1a5"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a target="_blank"href="https://twitter.com/CodersNoon"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:nirmalapanghal@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
