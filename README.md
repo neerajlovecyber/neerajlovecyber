@@ -5,7 +5,7 @@
     &nbsp; [![HitCount](http://hits.dwyl.com/TheDudeThatCode/TheDudeThatCode.svg)](http://hits.dwyl.com/TheDudeThatCode/TheDudeThatCode) 
 -->
 
-<img align="right" alt="PC GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/PC.gif" width="140" />
+<img align="right" alt="PC GIF" src="https://github.com/gamersnsp/gamersnsp/blob/master/assets/PC.gif" width="140" />
 
 ### <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="29px"> **Hello world!** &nbsp;<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Earth.gif" width="24px">
 
