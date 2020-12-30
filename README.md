@@ -73,3 +73,6 @@
   <a target="_blank"href="https://twitter.com/CodersNoon"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="mailto:nirmalapanghal@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
+# Blog posts 👩‍💻👨‍💻📙
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
