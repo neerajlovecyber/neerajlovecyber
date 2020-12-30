@@ -75,9 +75,9 @@
 </p>
 ### Blog posts 👩‍💻👨‍💻📙
 <!-- BLOG-POST-LIST:START -->
-- [Show your latest dev.to posts automatically on your GitHub profile readme](https://dev.to/gautamkrishnar/show-your-latest-dev-to-posts-automatically-in-your-github-profile-readme-3nk8)
-- [God Mode in browsers: document.designMode = "on"](https://dev.to/gautamkrishnar/god-mode-in-browsers-document-designmode-on-2pmo)
-- [Skipping the Chrome "Your connection is not private" warning](https://dev.to/gautamkrishnar/quickbits-1-skipping-the-chrome-your-connection-is-not-private-warning-4kp1)
-- [Microsoft Student Partners – Geek is the new rockstar](https://dev.to/gautamkrishnar/microsoft-student-partners--geek-is-the-new-rockstar)
-- [Microsoft Student Partners (Ambassadors) – Geek is the new rockstar](https://www.gautamkrishnar.com/microsoft-student-partners/)
+- [5 best Linux Distros out there for Beginners](https://www.codersnoon.com/2020/12/5-best-linux-distros-for-beginners.html)
+- [Linux basic for cyber security students Part 1](https://www.codersnoon.com/2020/11/linux-basic-for-cyber-security-students.html)
+- [How to learn linux ? Getting started in cybersecurity !](https://www.codersnoon.com/2020/11/how-to-learn-linux-getting-started-in-cybersecurity.html)
+- [Which programming languages used for creating aarogya Setu app?](https://www.codersnoon.com/2020/10/programming languages used for creating aarogya Setu.html)
+- [Lpu crypto ctf write-up 2020](https://www.codersnoon.com/2020/10/lpu-crypto-ctf-write-up-2020.html)
 <!-- BLOG-POST-LIST:END -->
