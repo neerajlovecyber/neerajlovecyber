@@ -71,7 +71,7 @@
 
 ## 📕 **Latest Blog Posts** 👨‍💻
 <!-- BLOG-POST-LIST:START -->
-- [Classctf writeup](https://www.codersnoon.com/2021/01/classctf-writeup.html)
+- [Classctf writeup crypto and forensics](https://www.codersnoon.com/2021/01/classctf-writeup.html)
 - [5 best Linux Distros out there for Beginners](https://www.codersnoon.com/2020/12/5-best-linux-distros-for-beginners.html)
 - [Linux basic for cyber security students Part 1](https://www.codersnoon.com/2020/11/linux-basic-for-cyber-security-students.html)
 - [How to learn linux ? Getting started in cybersecurity !](https://www.codersnoon.com/2020/11/how-to-learn-linux-getting-started-in-cybersecurity.html)
