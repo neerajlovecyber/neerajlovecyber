@@ -31,7 +31,9 @@
 
 
 <br>
-## Github Stats
+
+## **🔋 Github Stats 📝**
+
 <a href="https://github.com/gamersnsp">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheDudeThatCode&theme=dark&hide_langs_below=1" />
 </a>
