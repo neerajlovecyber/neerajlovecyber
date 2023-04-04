@@ -34,7 +34,7 @@
 
 ## **🔋 Github Stats 📝**
 
-<a href="https://github.com/gamersnsp">
+<a href="https://github.com/neerajlovecyber">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheDudeThatCode&theme=dark&hide_langs_below=1" />
 </a>
 
@@ -48,6 +48,8 @@
 <!--
 ![Neeraj github stats](https://github-readme-stats.vercel.app/api?username=gamersnsp&show_icons=true&hide_border=true)
 -->
+
+<br>
 
 <br>
 
