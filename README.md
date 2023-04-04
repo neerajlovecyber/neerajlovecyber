@@ -72,14 +72,7 @@
   <img src="https://profile-counter.glitch.me/gamersnsp/count.svg" />
 </p>
 
-## 📕 **Latest Blog Posts** 👨‍💻
-<!-- BLOG-POST-LIST:START -->
-- [Volatility Cheatsheet - Memory Forensics CTF](https://www.codersnoon.com/2021/01/volatility-cheatsheet-memory-forensics.html)
-- [CyberHack crypto ctf writeup](https://www.codersnoon.com/2021/01/cyberhack-crypto-ctf-writeup.html)
-- [5 best Linux Distros out there for Beginners](https://www.codersnoon.com/2020/12/5-best-linux-distros-for-beginners.html)
-- [Linux basic for cyber security students Part 1](https://www.codersnoon.com/2020/11/linux-basic-for-cyber-security-students.html)
-- [How to learn linux ? Getting started in cybersecurity !](https://www.codersnoon.com/2020/11/how-to-learn-linux-getting-started-in-cybersecurity.html)
-<!-- BLOG-POST-LIST:END -->
+
 
 
 <h2  align="center">📫 Reach me on</h2>
