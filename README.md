@@ -39,7 +39,7 @@
 </a>
 
 <a href="https://github.com/gamersnsp">
- <img align="center" src="https://github-readme-stats.vercel.app/api?username=gamersnsp&show_icons=true&theme=dark&line_height=27" alt="Neeraj's github stats"/>
+ <img align="center" src="https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&theme=dark&line_height=27" alt="Neeraj's github stats"/>
 </a>
 
 
