@@ -38,7 +38,7 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheDudeThatCode&theme=dark&hide_langs_below=1" />
 </a>
 
-<a href="https://github.com/gamersnsp">
+<a href="https://github.com/neerajlovecyber">
  <img align="center" src="https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&theme=dark&line_height=27" alt="Neeraj's github stats"/>
 </a>
 
