@@ -46,7 +46,7 @@
 
 <br>
 <!--
-![Neeraj github stats](https://github-readme-stats.vercel.app/api?username=gamersnsp&show_icons=true&hide_border=true)
+![Neeraj github stats](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&hide_border=true)
 -->
 
 <br>
