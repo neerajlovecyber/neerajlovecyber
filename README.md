@@ -1,66 +1,28 @@
-# Neeraj Singh&nbsp;
-
-
-<!-- 
-    &nbsp; [![HitCount](http://hits.dwyl.com/TheDudeThatCode/TheDudeThatCode.svg)](http://hits.dwyl.com/TheDudeThatCode/TheDudeThatCode) 
--->
-
-<img align="right" alt="PC GIF" src="https://github.com/gamersnsp/gamersnsp/blob/master/assets/PC.gif" width="140" />
-
-### <img src="https://cdn-icons-png.flaticon.com/512/465/465261.png" width="29px"> **Hello world!** &nbsp;<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Earth.gif" width="24px">
-
-<p>
-  <em>
-    I am a 3rd Year computer science engineering Student of <a href="https://www.lpu.in/"> <b>lovely professional University</b>, Phagwara</a>.  
-    A budding <b>Software Developer</b>  and a <b>Cybersecurity  Enthusiast,</b>&nbsp;  who is <b>obsessed</b>
-    with the idea of <b>improving</b> himself and wants a <b>platform</b> to 
-    <b>grow</b> and 
-    <b>excel.
-  </em>  
-</p>
-
-<br>
-
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/wave.gif" width="20vw" /> I’m *currently* **sleeping** 😴 or *working* on my **laptop** 👨‍💻
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/gandalf_parrot.gif" width="20vw" /> I’m *currently learning* how to **flex README** on my **profile** 💪.
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/headbang.gif" width="20vw" /> I’m *looking to collaborate* on **python 🐍 projects**.
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/hmm.gif" width="20vw" /> I’m *looking* for *help* with **wifi connection 🌐**
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/happy.gif" width="20vw" /> *Ask me* about **why do I think aliens 👽 exist.**
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/powerup.gif" width="20vw" /> **Pronouns:** [*He/Him*](https://pronoun.is/he) 🧔
-- <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/coin.gif" width="20vw" /> **Fun fact:** My *smartness* 💡 lies in my *laziness* 😴
-
-
-<br>
-
-## **🔋 Github Stats 📝**
-
-<a href="https://github.com/neerajlovecyber">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheDudeThatCode&theme=dark&hide_langs_below=1" />
-</a>
-
-<a href="https://github.com/neerajlovecyber">
- <img align="center" src="https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&theme=dark&line_height=27" alt="Neeraj's github stats"/>
-</a>
-
-
-
-<br>
-<!--
-![Neeraj github stats](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&hide_border=true)
--->
-
-<br>
-
-<br>
-
-<img src="https://github.com/gamersnsp/gamersnsp/blob/master/assets/Mario_Gameplay.gif" alt="Mario Game" width="980">
-
-<br>
-
-
-<h2  align="center">📫 Reach me on</h2>
 <p align="center">
-  <a target="_blank"href="https://www.linkedin.com/in/neeraj-singh-950a4b1a5"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a target="_blank"href="https://twitter.com/CodersNoon"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:nirmalapanghal@gmail.com?subject=Hello,%20From%20Github"><img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img alt="Header Image" src="https://github.com/Kartik-Dixit/Kartik-Dixit/blob/5d2059ae56c6ff0a4899752ca9bf06a10c8e2b7d/assets/Githubheader.png" />
 </p>
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%23d83a7c&size=30&center=true&width=1000&height=150&lines=Hi+there+%F0%9F%91%8B;I+am+Neeraj+Singh+(NeerajLoveCyber);I+am+a+CyberSec+Student+)](https://git.io/typing-svg)
+
+# 💫 About Me:
+🌱 I’m currently learning Web Application Penetration Testing, Binary Exploitation, Reverse Engineering.<br>
+💬 Ask me about Ethical Hacking, Network Security, Cryptography.<br>
+📧 neerajlovecyber@gmail.com
+
+
+## 🌐 Socials:
+
+
+# 💻 Tech Stack:
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=java&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat&logo=markdown&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=flat&logo=notion&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat&logo=Arduino&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&theme=radical&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=neerajlovecyber&theme=radical&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=neerajlovecyber&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=radical)
+
+---
+[![](https://visitcount.itsvg.in/api?id=neerajlovecyber&icon=0&color=0)](https://visitcount.itsvg.in)
+
