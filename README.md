@@ -32,5 +32,13 @@
 ---
 [![](https://visitcount.itsvg.in/api?id=neerajlovecyber&icon=0&color=0)](https://visitcount.itsvg.in)
 
+## 👥︎ How about an [r/ProgrammerHumor](https://www.reddit.com/r/ProgrammerHumor) meme before you go?
+
+The top voted meme for today is...
+
+### Get ready for the big Bang
+
+![ProgrammerHumour Meme of the Day](https://i.redd.it/wzs96b2gq5ya1.jpg)
+
 
 
