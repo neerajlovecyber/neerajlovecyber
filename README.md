@@ -9,6 +9,8 @@
 💬 Ask me about Ethical Hacking, Network Security, Cryptography.<br>
 📧 neerajlovecyber@gmail.com
 
+<p align="center"><a href="https://discord.com/users/980293844744695888"><img src="https://lanyard-profile-readme.vercel.app/api/980293844744695888"></a></p>
+
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/neerajsinghpanghal)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/neerajlovecyber) 
