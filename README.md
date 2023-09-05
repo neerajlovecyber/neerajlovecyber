@@ -32,7 +32,8 @@
 
 <!--END_SECTION:waka-->
 # 🔐 Cybersec platform stats:
-https://www.hackthebox.com/badge/image/1426649
+
+<img src="https://www.hackthebox.com/badge/image/1426649" alt="HackTheBox">
 <img src="https://tryhackme-badges.s3.amazonaws.com/neerajlovecyber.png" alt="TryHackMe">
 ---
 [![](https://visitcount.itsvg.in/api?id=neerajlovecyber&icon=0&color=0)](https://visitcount.itsvg.in)
