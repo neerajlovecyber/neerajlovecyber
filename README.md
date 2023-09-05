@@ -28,7 +28,8 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=neerajlovecyber&theme=midnight-purple&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=neerajlovecyber&theme=midnight-purple&hide_border=false&include_all_commits=true&count_private=true)
 
-
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 ---
 [![](https://visitcount.itsvg.in/api?id=neerajlovecyber&icon=0&color=0)](https://visitcount.itsvg.in)
 
