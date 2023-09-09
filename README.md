@@ -59,4 +59,5 @@
 
 # Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [5 Reason to still learn Python in 2023 | World’s Hottest Programming Language](https://neerajlovecyber.com/5-reason-to-learn-python/)
 <!-- BLOG-POST-LIST:END -->
