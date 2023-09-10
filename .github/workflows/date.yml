@@ -20,10 +20,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Update README with the current date
+      - name: Update README with the current date (IST)
         run: |
-          current_date=$(date)
-          sed -i "s|<!-- DATE -->|Last Updated: $current_date|" README.md
+          current_date=$(TZ="Asia/Kolkata" date '+%Y-%m-%d')
+          sed -i "s|<!-- DATE -->|Last Updated (IST): $current_date|" README.md
           git add README.md
           git commit -m "Update README with the current date" || exit 0
           git push
