@@ -1,6 +1,10 @@
 name: Update README.md Daily
 
 on:
+  push:
+    paths:
+      - 'README.md'
+
   schedule:
     - cron: '0 0 * * *' # Schedule to run daily at midnight UTC
 
