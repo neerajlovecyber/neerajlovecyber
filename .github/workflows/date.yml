@@ -12,11 +12,6 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
       - name: Set up Git
         run: |
           git config --global user.name "NeerajLoveCyber"
@@ -25,10 +20,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Update README with the current date (IST)
+      - name: Update README with the current date
         run: |
-          current_date=$(TZ="Asia/Kolkata" date '+%Y-%m-%d')
-          sed -i "s|<!-- DATE -->|Last Updated (IST): $current_date|" README.md
+          current_date=$(date +"%Y-%m-%d")
+          sed -i "s|<!-- DATE -->|Last Updated: $current_date|" README.md
           git add README.md
           git commit -m "Update README with the current date" || exit 0
           git push
