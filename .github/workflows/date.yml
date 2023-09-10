@@ -12,6 +12,11 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
       - name: Set up Git
         run: |
           git config --global user.name "NeerajLoveCyber"
