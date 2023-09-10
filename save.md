@@ -54,7 +54,7 @@
 
 [![](https://visitcount.itsvg.in/api?id=neerajlovecyber&icon=0&color=0)](https://visitcount.itsvg.in)
 
-# 📝 Blog posts
+# 📝 Blog posts :
 <!-- BLOG-POST-LIST:START -->
 - [5 Reason to still learn Python in 2023 | World’s Hottest Programming Language](https://neerajlovecyber.com/5-reason-to-learn-python/)
 <!-- BLOG-POST-LIST:END -->
