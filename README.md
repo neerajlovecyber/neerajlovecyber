@@ -56,6 +56,7 @@
 
 # 📝 Blog posts :
 <!-- BLOG-POST-LIST:START -->
+- [Simplify Your QA Testing Process with QA WatchDog](https://neerajlovecyber.com/simplify-your-qa-testing-process-with-qa-watchdog/)
 - [5 Reason to still learn Python in 2023 | World’s Hottest Programming Language](https://neerajlovecyber.com/5-reason-to-learn-python/)
 <!-- BLOG-POST-LIST:END -->
 
