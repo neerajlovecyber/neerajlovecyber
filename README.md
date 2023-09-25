@@ -56,10 +56,7 @@
 
 # 📝 Blog posts :
 <!-- BLOG-POST-LIST:START -->
-- [🔐 Unlocking the Power of Memory Forensics: Your Comprehensive Volatility Cheatsheet](https://neerajlovecyber.com/memory-forensics-volatility-cheatsheet-guide/)
-- [Raw Dump Tool: Empowering Digital Forensics with Memory Dump Analysis](https://neerajlovecyber.com/raw-dump-tool-empowering-digital-forensics-with-memory-dump-analysis/)
-- [Simplify Your QA Testing Process with QA WatchDog](https://neerajlovecyber.com/simplify-your-qa-testing-process-with-qa-watchdog/)
 - [5 Reason to still learn Python in 2023 | World’s Hottest Programming Language](https://neerajlovecyber.com/5-reason-to-learn-python/)
 <!-- BLOG-POST-LIST:END -->
 
-### 🕒 Last Updated:  24 Sep 2023
+### 🕒 Last Updated:  25 Sep 2023
