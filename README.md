@@ -44,7 +44,7 @@
 
 </summary>
 
-![](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&theme=midnight-purple&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![Neeraj's GitHub stats](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&theme=radical)
 ![](https://github-readme-streak-stats.herokuapp.com/?user=neerajlovecyber&theme=midnight-purple&hide_border=false)<br/>
 
 
