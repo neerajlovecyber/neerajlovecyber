@@ -22,7 +22,7 @@
 
 <img alt="Header Image" src="https://media.tenor.com/OmVmqWbXjuYAAAAC/rainbow-line-color.gif" width="900" />
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=neerajlovecyber&theme=midnight-purple&hide_border=false&include_all_commits=true&count_private=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=neerajlovecyber&size_weight=0.5&count_weight=0.5)
 ## 🔐 Cybersec platform stats:
 
 <img src="https://www.hackthebox.com/badge/image/1426649" alt="HackTheBox">
