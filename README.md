@@ -22,7 +22,7 @@
 
 <img alt="Header Image" src="https://media.tenor.com/OmVmqWbXjuYAAAAC/rainbow-line-color.gif" width="900" />
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=neerajlovecyber&size_weight=0.5&count_weight=0.5)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=neerajlovecyber&theme=midnight-purple&hide_border=false&include_all_commits=true&count_private=true)
 ## 🔐 Cybersec platform stats:
 
 <img src="https://www.hackthebox.com/badge/image/1426649" alt="HackTheBox">
@@ -44,7 +44,7 @@
 
 </summary>
 
-![Neeraj's GitHub stats](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&show_icons=true&theme=radical)
+![](https://github-readme-stats.vercel.app/api?username=neerajlovecyber&theme=midnight-purple&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=neerajlovecyber&theme=midnight-purple&hide_border=false)<br/>
 
 
@@ -56,10 +56,7 @@
 
 # 📝 Blog posts :
 <!-- BLOG-POST-LIST:START -->
-- [🔐 Unlocking the Power of Memory Forensics: Your Comprehensive Volatility Cheatsheet](https://neerajlovecyber.com/memory-forensics-volatility-cheatsheet-guide/)
-- [Raw Dump Tool: Empowering Digital Forensics with Memory Dump Analysis](https://neerajlovecyber.com/raw-dump-tool-empowering-digital-forensics-with-memory-dump-analysis/)
-- [Simplify Your QA Testing Process with QA WatchDog](https://neerajlovecyber.com/simplify-your-qa-testing-process-with-qa-watchdog/)
 - [5 Reason to still learn Python in 2023 | World’s Hottest Programming Language](https://neerajlovecyber.com/5-reason-to-learn-python/)
 <!-- BLOG-POST-LIST:END -->
 
-### 🕒 Last Updated:  27 Mar 2024
+### 🕒 Last Updated:  28 Mar 2024
