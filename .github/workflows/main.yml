@@ -1,9 +1,9 @@
-name: Build LaTeX Resume
+name: Build and Deploy Resume
 
 on:
   push:
     branches: [ main ]   # Change if your default branch is different
-  workflow_dispatch:      # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,13 +13,23 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up LaTeX
+      - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
 
-      - name: Upload PDF artifact
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: resume
           path: resume.pdf
+
+      - name: Deploy PDF to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          keep_files: true
+          user_name: github-actions
+          user_email: github-actions@github.com
