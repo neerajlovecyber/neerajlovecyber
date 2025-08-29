@@ -20,8 +20,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          output_directory: ./   # Save PDF in repo root
-          latexmk_args: -jobname=resume
+          args: -jobname=resume  # Rename output PDF
 
       - name: Commit PDF
         run: |
