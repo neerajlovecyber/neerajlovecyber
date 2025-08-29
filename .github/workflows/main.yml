@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'main.tex'
+      - 'resume.tex'
 
 jobs:
   build:
@@ -19,9 +19,8 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: main.tex
-          args: -jobname=resume  # Rename output PDF
-
+          root_file: resume.tex
+          
       - name: Commit PDF
         run: |
           git config user.name "github-actions[bot]"
