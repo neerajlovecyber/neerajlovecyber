@@ -1,0 +1,188 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\input{glyphtounicode}
+
+% Define professional colors
+\definecolor{primarycolor}{HTML}{000000}
+\definecolor{accentcolor}{HTML}{005842} 
+\definecolor{textgray}{HTML}{000000}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{primarycolor}
+}{}{0em}{}[\color{accentcolor}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{accentcolor}#1} & \color{textgray}#2 \\
+      \textit{\small#3} & \textit{\small \color{textgray}#4} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{p{0.85\textwidth}@{\extracolsep{\fill}}r}
+      \small#1 & \color{textgray}#2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Neeraj Singh} \\ \vspace{1pt}
+    \small \faEnvelope\ \href{mailto:Neerajlovecyber@gmail.com}{Neerajlovecyber@gmail.com} $|$ 
+    \faPhone\ +91 7988815263 $|$ 
+    \faLinkedin\ \href{https://www.linkedin.com/in/neerajlovecyber/}{LinkedIn} $|$
+    \faGithub\ \href{https://github.com/neerajlovecyber}{GitHub} $|$
+    \faGlobe\ \href{https://neeralovecyber.com}{neeralovecyber.com}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Security Developer and DevOps Intern}{Nov 2024 -- Present}
+      {xIoTz Private Limited}{Bengaluru (Hybrid)}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented custom \textbf{Wazuh} Active Response modules to \textbf{automate} threat mitigation, significantly improving real-time \textbf{incident handling} across monitored infrastructure}
+        \resumeItem{Deployed and managed security tools on \textbf{AWS EC2} instances with basic \textbf{cloud infrastructure} configuration and \textbf{DevOps} practices}
+        \resumeItem{Contributed to development of cyber assurance platform, integrating \textbf{Wazuh} and \textbf{automation pipelines} for enhanced \textbf{threat detection} and centralized security management}
+        \resumeItem{Performed core \textbf{SOC operations} including \textbf{alert triaging}, \textbf{log analysis}, and \textbf{incident response} using \textbf{ELK Stack} for centralized logging}
+        \resumeItem{Conducted basic \textbf{penetration testing} on internal systems to proactively discover \textbf{vulnerabilities} and support secure development practices}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SDET and Operations Intern}{Oct 2023 -- Sep 2024}
+      {Frugal Testing}{Hyderabad}
+      \resumeItemListStart
+        \resumeItem{Developed and executed \textbf{automated test scripts} using \textbf{Selenium} and \textbf{TestNG} for web and \textbf{API testing} in Java, increasing test coverage by 40\%}
+        \resumeItem{Implemented \textbf{CI/CD pipelines} with \textbf{GitHub Actions}, reducing deployment time by 30\% through \textbf{automation}}
+        \resumeItem{Conducted \textbf{API automation testing} using \textbf{Postman} and \textbf{Rest Assured}, applying robust validation techniques, improving test reliability by 50\%}
+        \resumeItem{Identified and documented software defects using \textbf{JIRA} and \textbf{Trello}, leading to a 25\% reduction in bug resolution time}
+        \resumeItem{Integrated \textbf{Allure} for detailed test reporting and automated notifications on \textbf{Slack} using custom templates, enhancing reporting efficiency by 25\%}
+        \resumeItem{\textbf{Containerized} testing environments using \textbf{Docker} and deployed on \textbf{Kubernetes} clusters for scalable test execution}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Security Intern}{Jun 2021 -- Jul 2021}
+      {Gurugram Police}{Gurugram}
+      \resumeItemListStart
+        \resumeItem{Conducted \textbf{penetration testing} using \textbf{BurpSuite}, \textbf{Nmap}, and \textbf{Metasploit} to identify security \textbf{vulnerabilities}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Personal Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{What's My Server Doing?} $|$ \emph{Go, Tauri, Shadcn, \textbf{Docker}, Linux} $|$ Real-time server performance and log monitoring tool with Go backend for tracking RAM, CPU usage, and logs across multiple Linux servers}{2024}
+      \resumeProjectHeading
+          {\textbf{Ram Dump Tool} $|$ \emph{Python, Rust, React, Winpmem, MongoDB} $|$ Memory dumping \textbf{forensics} tool for extracting volatile memory (RAM) contents with cross-platform compatibility}{2024}
+      \resumeProjectHeading
+          {\textbf{OneClickRun} $|$ \emph{Shell Script, Hashcat, Google Colab, Aria2} $|$ Multifunctional \textbf{automation} tool with Jellyfin, aria2 features and Hashcat functionality for password cracking using Google Colab resources}{2023}
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+
+     \textbf{DevOps Tools}{: Docker, Kubernetes, GitHub Actions, Jenkins, Git, Linux Administration, AWS (EC2), ELK Stack} \\
+     \textbf{Cybersecurity Tools}{: Metasploit, BurpSuite, Nmap, John The Ripper, Wireshark, Radare2, Hydra, Aircrack-ng, SQLMap, Nikto, W3af, Nessus, OpenVAS, Volatility, Autopsy, Ghidra, IDA Pro} \\
+     \textbf{Languages}{: Python, Java, C++, JavaScript, HTML, CSS, Bash Script} \\
+     \textbf{Testing Tools}{: Selenium, TestNG, Postman, Rest Assured, JMeter, Appium, JIRA, Trello, Allure} \\
+     \textbf{Cloud/Databases}{: MongoDB, Firebase, MySQL, DigitalOcean}
+    }}
+ \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Certified Ethical Hacker (CEH) Practical} $|$ Score: 200/200 $|$ Real-world security testing expertise}{2024}
+      \resumeProjectHeading
+          {\textbf{eLearnSecurity Junior Penetration Tester} $|$ 48-hour practical exam with 5-lab penetration testing}{2024}
+      \resumeProjectHeading
+          {\textbf{Jr. Penetration Tester by TryHackMe} $|$ Top 2\% ranking $|$ Structured penetration testing learning path}{2023}
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lovely Professional University}{Punjab, India}
+      {Bachelor of Technology in Computer Science and Engineering (Cybersecurity)}{Aug 2020 -- Sep 2024}
+      \resumeItemListStart
+        \resumeItem{CGPA: 8.29/10.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\textcolor{white}{Hire him}
+\end{document}
