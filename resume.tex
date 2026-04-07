@@ -1,4 +1,5 @@
-\documentclass[letterpaper,11pt]{article}
+% A4 is slightly taller than US Letter (~11.7" vs 11"). For US-only jobs, use letterpaper.
+\documentclass[a4paper,10pt]{article}
 \usepackage{iftex}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -13,22 +14,37 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-% Source Sans: use XeLaTeX or LuaLaTeX for the real OpenType font (install
-% "Source Sans 3" or "Source Sans Pro" from Google Fonts). pdfLaTeX falls back
-% to the Type1 sourcesanspro bundle.
+% Compact sans like typical Word CVs (Calibri / Segoe). Source Sans is wider and feels more “spread out”.
 \ifPDFTeX
   \usepackage[T1]{fontenc}
-  \usepackage[default]{sourcesanspro}
+  \usepackage[scaled=0.93]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+  \usepackage{microtype}
+  \microtypesetup{nopatch=footnote}
   \input{glyphtounicode}
 \else
   \usepackage{fontspec}
   \defaultfontfeatures{Ligatures=TeX}
-  \IfFontExistsTF{Source Sans 3}{%
-    \setmainfont{Source Sans 3}%
+  \IfFontExistsTF{Calibri}{%
+    \setmainfont{Calibri}[Scale=0.96]%
   }{%
-    \setmainfont{Source Sans Pro}%
-  }
+    \IfFontExistsTF{Segoe UI}{%
+      \setmainfont{Segoe UI}[Scale=0.96]%
+    }{%
+      \IfFontExistsTF{Arial}{%
+        \setmainfont{Arial}[Scale=0.96]%
+      }{%
+        \IfFontExistsTF{Source Sans 3}{%
+          \setmainfont{Source Sans 3}[Scale=0.94]%
+        }{%
+          \setmainfont{Source Sans Pro}[Scale=0.94]%
+        }%
+      }%
+    }%
+  }%
 \fi
+\usepackage{setspace}
+\setstretch{0.96}
 
 % Define professional colors
 \definecolor{primarycolor}{HTML}{000000}
@@ -41,13 +57,14 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4pt}
 
-% Adjust margins
+% Adjust margins (wider/taller type area for more content per page)
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.6in}
 \addtolength{\textwidth}{1.2in}
 \addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
 
@@ -56,9 +73,14 @@
 \setlength{\tabcolsep}{0in}
 
 % Section formatting (section titles in accent blue, rule matches)
+% Uniform gap above each section and below the rule (matches rhythm across blocks)
+\titlespacing*{\section}{0pt}{7pt}{5pt}
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\color{accentcolor}
-}{}{0em}{}[\color{accentcolor}\titlerule \vspace{-5pt}]
+  \bfseries\scshape\raggedright\large\color{accentcolor}
+}{}{0em}{}[{%
+  \color{accentcolor}%
+  \titleline{\leaders\hrule height 1.2pt\hfill}%
+}]
 
 % Ensure that generate pdf is machine readable/ATS parsable (pdfLaTeX only)
 \ifdefined\pdfgentounicode
@@ -74,40 +96,55 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-3pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\color{primarycolor}#1} & \color{textgray}#2 \\
       \textit{\small#3} & \textit{\small \color{textgray}#4} \\
     \end{tabular*}\vspace{-9pt}
 }
 
-% Compact one-line header: Title, Company MM/YYYY -- MM/YYYY | Location
+% Compact job line: Title + company (left); dates | location flush right
 \newcommand{\resumeJobCompact}[4]{%
-  \vspace{-2pt}\item[]
-    {\small\textbf{\color{primarycolor}#1}, #2\ #3 $|$ \color{textgray}#4}\vspace{-7pt}
+  \item[]
+    \begin{tabular*}{\textwidth}[t]{@{}>{\raggedright\arraybackslash}p{\dimexpr\textwidth - 2.35in\relax}@{\extracolsep{\fill}}r@{}}
+      \small\textbf{\color{primarycolor}#1}, #2 & \small\color{textgray}#3 $|$ #4 \\
+    \end{tabular*}\par\vspace{0pt}
 }
-\newcommand{\resumeExpItem}[1]{\item\small{#1\vspace{-3pt}}}
-\newcommand{\resumeExpListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeExpListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeExpItem}[1]{\item {\small #1}}
+% Tight bullet: same font size as body, small labelsep, parleft so wrapped lines align under text
+\newcommand{\resumeExpListStart}{\begin{itemize}[
+  align=parleft,
+  leftmargin=0.14in,
+  labelindent=0pt,
+  itemindent=0pt,
+  label={\small\textbullet},
+  labelwidth=0.45em,
+  labelsep=0.22em,
+  itemsep=2pt,
+  topsep=0pt,
+  parsep=0pt,
+  partopsep=0pt
+]}
+\newcommand{\resumeExpListEnd}{\end{itemize}\vspace{-2pt}}
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{p{0.85\textwidth}@{\extracolsep{\fill}}r}
-      \small#1 & \color{textgray}#2 \\
-    \end{tabular*}\vspace{-5pt}
+% Full-width project line (no right-hand dates column)
+\newcommand{\resumeProjectHeading}[1]{%
+  \item[]
+    {\raggedright\small #1\par}\vspace{2pt}%
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+% Flush with \section titles (no extra list indent); nested exp bullets keep their own margin
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, itemindent=0pt, label={}, labelwidth=0pt, labelsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -119,7 +156,17 @@
 
 %----------HEADING----------
 \begin{center}
-    {\color{accentcolor}\textbf{\Huge \scshape Neeraj Singh}} \\ \vspace{4pt}
+    {\color{accentcolor}%
+      \ifPDFTeX
+        \bfseries\fontsize{24}{29}\selectfont\scshape Neeraj Singh%
+      \else
+        {\Huge\scshape
+          \IfFontExistsTF{Calibri}{\fontspec{Calibri}[FakeBold=1.35]{Neeraj Singh}}{%
+          \IfFontExistsTF{Segoe UI}{\fontspec{Segoe UI}[FakeBold=1.35]{Neeraj Singh}}{%
+          \IfFontExistsTF{Arial}{\fontspec{Arial}[FakeBold=1.35]{Neeraj Singh}}{%
+          \textbf{Neeraj Singh}}}}%
+      \fi
+    } \\ \vspace{4pt}
     {\large \textbf{DevOps Engineer \& Security Developer}} \\ \vspace{8pt}
     \small \faEnvelope\ \href{mailto:Neerajlovecyber@gmail.com}{Neerajlovecyber@gmail.com} $|$ 
     \faPhone\ +91 7988815263 $|$ 
@@ -127,96 +174,104 @@
     \faGithub\ \href{https://github.com/neerajlovecyber}{GitHub} $|$
     \faGlobe\ \href{https://neerajlovecyber.com}{neerajlovecyber.com}
 \end{center}
+\vspace{2pt}
 
 %-----------PROFILE-----------
 \section{Profile}
-\noindent\small
-\textbf{DevOps Engineer \& Security Developer} with experience designing, building, and operating security-aware, cloud-backed systems. Strong background in automation and reliability using \textbf{Python}, \textbf{Java}, and \textbf{JavaScript}, with hands-on work in \textbf{CI/CD} (\textbf{GitHub Actions}, \textbf{Jenkins}), containerization (\textbf{Docker}, \textbf{Kubernetes}), and cloud infrastructure on \textbf{AWS}. Experienced in \textbf{SOC} operations, centralized logging with the \textbf{ELK Stack}, and production monitoring and response using platforms such as \textbf{Wazuh}.
-
-\vspace{6pt}
+{\small
 \noindent
-Additionally, hands-on practice in \textbf{offensive and defensive security}---including \textbf{penetration testing}, vulnerability assessment, and certification-backed skills (\textbf{CEH Practical}, \textbf{eJPT})---paired with \textbf{SDET} experience in web and \textbf{API} test automation. Passionate about connecting secure development, operations, and testing to deliver scalable, observable, and production-grade systems.
+\textbf{DevOps Engineer \& Security Developer} with 3+ years designing, building, and operating scalable, cloud-native security platforms. Strong in \textbf{Python}, and \textbf{JavaScript}, with \textbf{CI/CD} (\textbf{GitHub Actions}, \textbf{Jenkins}), \textbf{Docker}, \textbf{Kubernetes}, \textbf{AWS} (\textbf{EC2}), and \textbf{ELK} centralized logging. Runs \textbf{SOC} workflows and \textbf{Wazuh}-based monitoring, detection, and response for production environments.
 
-\vspace{-4pt}
+\vspace{5pt}
+\noindent
+Also delivers offensive security ---\textbf{penetration testing}, vulnerability assessment, and \textbf{CEH}/\textbf{eJPT}---plus \textbf{SDET} automation for web and \textbf{API} testing. Focused on aligning development, security, and operations for secure, high-performance distributed systems.
+\par}
 
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
 
     \resumeJobCompact
-      {CyberSecurity Developer}{xIoTz Private Limited}{11/2024 -- Present}{Bengaluru (Hybrid)}
+      {CyberSecurity Developer}{xIoTz Private Limited}{11/2024 -- Present}{Bengaluru}
       \resumeExpListStart
-        \resumeExpItem{Designed and shipped custom \textbf{Wazuh} Active Response modules to \textbf{automate} threat mitigation and tighten real-time \textbf{incident handling} across monitored infrastructure.}
-        \resumeExpItem{Deployed and operated security tooling on \textbf{AWS EC2} with \textbf{DevOps}-style provisioning, configuration, and day-to-day cloud operations.}
-        \resumeExpItem{Contributed to a cyber assurance platform integrating \textbf{Wazuh}, \textbf{automation pipelines}, and centralized workflows for \textbf{threat detection} and security management.}
-        \resumeExpItem{Ran core \textbf{SOC} duties---\textbf{alert triage}, \textbf{log analysis}, and \textbf{incident response}---on \textbf{ELK}-centralized data for visibility and faster response.}
-        \resumeExpItem{Executed scoped internal \textbf{penetration tests} (\textbf{Burp Suite}, \textbf{Nmap}, toolchain) to surface \textbf{vulnerabilities} and support secure development.}
+        \resumeExpItem{Designed and shipped custom \textbf{Wazuh} Active Response modules to \textbf{automate} containment and remediation, reducing manual steps in real-time \textbf{incident handling} and keeping outcomes consistent across estates.}
+        \resumeExpItem{Contributed to a cyber assurance platform on \textbf{AWS EC2}, integrating \textbf{Wazuh} with \textbf{automation pipelines} and centralized workflows for \textbf{threat detection} and policy; owned \textbf{DevOps}-style provisioning, configuration, deployment, and steady-state operations so security controls shipped with observable health and repeatability.}
+        \resumeExpItem{Ran core \textbf{SOC} operations---\textbf{alert triage}, deep-dive \textbf{log analysis}, and structured \textbf{incident response}---on \textbf{ELK}-centralized telemetry; refined queries and narratives to improve signal-to-noise and hand off durable fixes to engineering.}
+        \resumeExpItem{Executed scoped internal \textbf{penetration testing} with practical tooling (\textbf{Burp Suite}, \textbf{Nmap}, and related chain) to surface exploitable \textbf{vulnerabilities}, prioritized risk with stakeholders, and aligned remediation with secure development practices.}
       \resumeExpListEnd
 
     \resumeJobCompact
       {SDET \& Operations Intern}{Frugal Testing}{10/2023 -- 09/2024}{Hyderabad}
       \resumeExpListStart
-        \resumeExpItem{Built and ran \textbf{Selenium}/\textbf{TestNG} web and \textbf{API} automation in \textbf{Java}, lifting test coverage \textbf{40\%}.}
+        \resumeExpItem{Built web and \textbf{API} automation with \textbf{Selenium}, \textbf{TestNG}, \textbf{Postman}, and \textbf{Rest Assured} in \textbf{Java}, lifting test coverage \textbf{40\%} and API suite reliability \textbf{50\%}.}
         \resumeExpItem{Implemented \textbf{CI/CD} with \textbf{GitHub Actions}, cutting deployment time \textbf{30\%} via repeatable pipelines and automation.}
-        \resumeExpItem{Automated APIs with \textbf{Postman} and \textbf{Rest Assured}, improving suite reliability \textbf{50\%} through stronger validation and stability fixes.}
-        \resumeExpItem{Triaged and tracked defects in \textbf{JIRA}/\textbf{Trello}, contributing to a \textbf{25\%} reduction in bug resolution time through clearer ownership and reporting.}
-        \resumeExpItem{Integrated \textbf{Allure} reporting and \textbf{Slack} notifications (custom templates), improving reporting efficiency \textbf{25\%}.}
-        \resumeExpItem{\textbf{Containerized} test environments with \textbf{Docker} and executed suites on \textbf{Kubernetes} for scalable, parallel test runs.}
-      \resumeExpListEnd
-
-    \resumeJobCompact
-      {Security Intern}{Gurugram Police}{06/2021 -- 07/2021}{Gurugram}
-      \resumeExpListStart
-        \resumeExpItem{Supported security assessments with \textbf{penetration testing} using \textbf{Burp Suite}, \textbf{Nmap}, and \textbf{Metasploit} to identify \textbf{vulnerabilities} and document findings.}
+        \resumeExpItem{Triaged and tracked defects in \textbf{JIRA}/\textbf{Trello} for a \textbf{25\%} faster resolution cycle; shipped \textbf{Allure} reports and \textbf{Slack} alerts (custom templates) for another \textbf{25\%} gain in reporting efficiency.}
+        \resumeExpItem{\textbf{Containerized} test environments with \textbf{Docker} and executed suites on \textbf{Kubernetes} for scalable, parallel runs.}
       \resumeExpListEnd
 
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Personal Projects}
+\section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{\href{https://ssb-buddy.neerajlovecyber.com/}{SSB Buddy}} $|$ \emph{React Native, Expo, InstantDB, Clerk, TypeScript} $|$ Mobile app for SSB aspirants with preparation resources, mock interviews, and guidance tools}{2025}
+          {\textbf{Security Audit360} --- Baseline \& Audit Console, Centralizes 40+ org signals (DNS, domains, IPs, certs) and ships exportable \textbf{security audit reports} for ops and compliance.}
       \resumeProjectHeading
-          {\textbf{\href{https://theclosedtest.neerajlovecyber.com/}{TheClosedTest}} $|$ \emph{React Native, Expo, Convex, TypeScript} $|$ Mutual app testing platform for Play Store developers to exchange reviews and boost rankings}{2026}
+          {\textbf{Cyber Assurance Platform} --- Unified \textbf{SOC} \& \textbf{CSPM} Layer, One operational plane for detection, triage, centralized logging, cloud posture, and workload telemetry with automation—not siloed point tools.}
       \resumeProjectHeading
-          {\textbf{Ram Dump Tool} $|$ \emph{Python, Rust, React, Winpmem, MongoDB} $|$ Memory dumping \textbf{forensics} tool for extracting volatile memory (RAM) contents with cross-platform compatibility}{2024}
+          {\textbf{\href{https://ssb-buddy.neerajlovecyber.com/}{SSB Buddy}} --- SSB Prep \& Mock Interviews, Mobile app with guidance, mock interviews, and study tools for Defence board candidates.}
+      \resumeProjectHeading
+          {\textbf{Hafia} --- Maritime Shipping Delivery Assurance, Client program for a \textbf{shipping management} web and mobile product with \textbf{real-time vessel tracking}; built pipeline-friendly regression and integration coverage on live telemetry and fleet data paths, release gates, and environment checks so tracking, dashboards, and ops workflows stayed reliable under production-like load.}
     \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
+{\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\textbf{Programming \& Languages} &
+\textbf{Developer \& Testing Tools} &
+\textbf{DBMS} \\[2pt]
+Python, Java, C++, JavaScript, TypeScript, HTML, CSS, Bash, SQL, Rust &
+VS Code, Git, Postman, Cursor, JIRA, Trello, Slack, Selenium, TestNG, Rest Assured, Allure &
+MongoDB, MySQL, Firebase, PostgreSQL, Redis, ELK Stack (OpenSearch) \\[7pt]
+\textbf{DevOps \& IaC} &
+\textbf{Clouds} &
+\textbf{Cybersecurity} \\[2pt]
+Docker, Kubernetes, GitHub Actions, Jenkins, Linux Administration, Terraform, Grafana, Ansible &
+AWS (EC2), GCP, Azure, Digital Ocean &
+Metasploit, Burp Suite, Nmap, Wireshark, SQLMap, Nessus, Volatility, Ghidra, Wazuh \\
+\end{tabularx}
+\par}
 
-     \textbf{DevOps Tools}{: Docker, Kubernetes, GitHub Actions, Jenkins, Git, Linux Administration, AWS (EC2), ELK Stack} \\
-     \textbf{Cybersecurity Tools}{: Metasploit, BurpSuite, Nmap, John The Ripper, Wireshark, Radare2, Hydra, Aircrack-ng, SQLMap, Nikto, W3af, Nessus, OpenVAS, Volatility, Autopsy, Ghidra, IDA Pro} \\
-     \textbf{Languages}{: Python, Java, C++, JavaScript, HTML, CSS, Bash Script} \\
-     \textbf{Testing Tools}{: Selenium, TestNG, Postman, Rest Assured, JMeter, Appium, JIRA, Trello, Allure} \\
-     \textbf{Cloud/Databases}{: MongoDB, Firebase, MySQL, DigitalOcean}
-    }}
- \end{itemize}
-
-%-----------CERTIFICATIONS-----------
-\section{Certifications}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Certified Ethical Hacker (CEH) Practical} $|$ Score: 200/200 $|$ Real-world security testing expertise}{2024}
-      \resumeProjectHeading
-          {\textbf{eLearnSecurity Junior Penetration Tester} $|$ 48-hour practical exam with 5-lab penetration testing}{2024}
-      \resumeProjectHeading
-          {\textbf{Jr. Penetration Tester by TryHackMe} $|$ Top 2\% ranking $|$ Structured penetration testing learning path}{2023}
-    \resumeSubHeadingListEnd
+%-----------CERTIFICATES-----------
+\section{Certificates}
+{\small
+\setlength{\tabcolsep}{10pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{minipage}[t]{\linewidth}
+\textbf{Certified Ethical Hacker (CEH)}\\[2pt]
+By EC-Council
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}
+\textbf{Jr. Penetration Tester (eJPT)}\\[2pt]
+By eLearnSecurity
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}
+\textbf{Jr.\ Penetration Tester}\\[2pt]
+By TryHackMe
+\end{minipage} \\
+\end{tabularx}
+\par}
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Lovely Professional University}{Punjab, India}
-      {Bachelor of Technology in Computer Science and Engineering (Cybersecurity)}{Aug 2020 -- Sep 2024}
-      \resumeItemListStart
-        \resumeItem{CGPA: 8.29/10.0}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+{\small\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+\textbf{Bachelor of Technology in Computer Science and Engineering (Cybersecurity)} & 2020 -- 2024 $|$ CGPA 8.29/10.0 \\
+\end{tabular*}
+\par}
 
 \textcolor{white}{Hire him}
 \end{document}
