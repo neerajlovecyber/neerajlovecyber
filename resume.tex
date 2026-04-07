@@ -1,4 +1,5 @@
 \documentclass[letterpaper,11pt]{article}
+\usepackage{iftex}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -12,12 +13,26 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage[T1]{fontenc}
-\input{glyphtounicode}
+% Source Sans: use XeLaTeX or LuaLaTeX for the real OpenType font (install
+% "Source Sans 3" or "Source Sans Pro" from Google Fonts). pdfLaTeX falls back
+% to the Type1 sourcesanspro bundle.
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{sourcesanspro}
+  \input{glyphtounicode}
+\else
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  \IfFontExistsTF{Source Sans 3}{%
+    \setmainfont{Source Sans 3}%
+  }{%
+    \setmainfont{Source Sans Pro}%
+  }
+\fi
 
 % Define professional colors
 \definecolor{primarycolor}{HTML}{000000}
-\definecolor{accentcolor}{HTML}{005842} 
+\definecolor{accentcolor}{HTML}{2563EB}
 \definecolor{textgray}{HTML}{000000}
 
 % Page setup
@@ -40,13 +55,15 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
+% Section formatting (section titles in accent blue, rule matches)
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\color{primarycolor}
+  \vspace{-4pt}\scshape\raggedright\large\color{accentcolor}
 }{}{0em}{}[\color{accentcolor}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% Ensure that generate pdf is machine readable/ATS parsable (pdfLaTeX only)
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -58,10 +75,19 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\color{accentcolor}#1} & \color{textgray}#2 \\
+      \textbf{\color{primarycolor}#1} & \color{textgray}#2 \\
       \textit{\small#3} & \textit{\small \color{textgray}#4} \\
     \end{tabular*}\vspace{-9pt}
 }
+
+% Compact one-line header: Title, Company MM/YYYY -- MM/YYYY | Location
+\newcommand{\resumeJobCompact}[4]{%
+  \vspace{-2pt}\item[]
+    {\small\textbf{\color{primarycolor}#1}, #2\ #3 $|$ \color{textgray}#4}\vspace{-7pt}
+}
+\newcommand{\resumeExpItem}[1]{\item\small{#1\vspace{-3pt}}}
+\newcommand{\resumeExpListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeExpListEnd}{\end{itemize}\vspace{-6pt}}
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
@@ -93,7 +119,8 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Neeraj Singh} \\ \vspace{1pt}
+    {\color{accentcolor}\textbf{\Huge \scshape Neeraj Singh}} \\ \vspace{4pt}
+    {\large \textbf{DevOps Engineer \& Security Developer}} \\ \vspace{8pt}
     \small \faEnvelope\ \href{mailto:Neerajlovecyber@gmail.com}{Neerajlovecyber@gmail.com} $|$ 
     \faPhone\ +91 7988815263 $|$ 
     \faLinkedin\ \href{https://www.linkedin.com/in/neerajlovecyber/}{LinkedIn} $|$
@@ -101,39 +128,47 @@
     \faGlobe\ \href{https://neerajlovecyber.com}{neerajlovecyber.com}
 \end{center}
 
+%-----------PROFILE-----------
+\section{Profile}
+\noindent\small
+\textbf{DevOps Engineer \& Security Developer} with experience designing, building, and operating security-aware, cloud-backed systems. Strong background in automation and reliability using \textbf{Python}, \textbf{Java}, and \textbf{JavaScript}, with hands-on work in \textbf{CI/CD} (\textbf{GitHub Actions}, \textbf{Jenkins}), containerization (\textbf{Docker}, \textbf{Kubernetes}), and cloud infrastructure on \textbf{AWS}. Experienced in \textbf{SOC} operations, centralized logging with the \textbf{ELK Stack}, and production monitoring and response using platforms such as \textbf{Wazuh}.
+
+\vspace{6pt}
+\noindent
+Additionally, hands-on practice in \textbf{offensive and defensive security}---including \textbf{penetration testing}, vulnerability assessment, and certification-backed skills (\textbf{CEH Practical}, \textbf{eJPT})---paired with \textbf{SDET} experience in web and \textbf{API} test automation. Passionate about connecting secure development, operations, and testing to deliver scalable, observable, and production-grade systems.
+
+\vspace{-4pt}
+
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {CyberSecurity Developer}{Nov 2024 -- Present}
-      {xIoTz Private Limited}{Bengaluru (Hybrid)}
-      \resumeItemListStart
-        \resumeItem{Designed and implemented custom \textbf{Wazuh} Active Response modules to \textbf{automate} threat mitigation, significantly improving real-time \textbf{incident handling} across monitored infrastructure}
-        \resumeItem{Deployed and managed security tools on \textbf{AWS EC2} instances with basic \textbf{cloud infrastructure} configuration and \textbf{DevOps} practices}
-        \resumeItem{Contributed to development of cyber assurance platform, integrating \textbf{Wazuh} and \textbf{automation pipelines} for enhanced \textbf{threat detection} and centralized security management}
-        \resumeItem{Performed core \textbf{SOC operations} including \textbf{alert triaging}, \textbf{log analysis}, and \textbf{incident response} using \textbf{ELK Stack} for centralized logging}
-        \resumeItem{Conducted basic \textbf{penetration testing} on internal systems to proactively discover \textbf{vulnerabilities} and support secure development practices}
-      \resumeItemListEnd
+    \resumeJobCompact
+      {CyberSecurity Developer}{xIoTz Private Limited}{11/2024 -- Present}{Bengaluru (Hybrid)}
+      \resumeExpListStart
+        \resumeExpItem{Designed and shipped custom \textbf{Wazuh} Active Response modules to \textbf{automate} threat mitigation and tighten real-time \textbf{incident handling} across monitored infrastructure.}
+        \resumeExpItem{Deployed and operated security tooling on \textbf{AWS EC2} with \textbf{DevOps}-style provisioning, configuration, and day-to-day cloud operations.}
+        \resumeExpItem{Contributed to a cyber assurance platform integrating \textbf{Wazuh}, \textbf{automation pipelines}, and centralized workflows for \textbf{threat detection} and security management.}
+        \resumeExpItem{Ran core \textbf{SOC} duties---\textbf{alert triage}, \textbf{log analysis}, and \textbf{incident response}---on \textbf{ELK}-centralized data for visibility and faster response.}
+        \resumeExpItem{Executed scoped internal \textbf{penetration tests} (\textbf{Burp Suite}, \textbf{Nmap}, toolchain) to surface \textbf{vulnerabilities} and support secure development.}
+      \resumeExpListEnd
 
-    \resumeSubheading
-      {SDET and Operations Intern}{Oct 2023 -- Sep 2024}
-      {Frugal Testing}{Hyderabad}
-      \resumeItemListStart
-        \resumeItem{Developed and executed \textbf{automated test scripts} using \textbf{Selenium} and \textbf{TestNG} for web and \textbf{API testing} in Java, increasing test coverage by 40\%}
-        \resumeItem{Implemented \textbf{CI/CD pipelines} with \textbf{GitHub Actions}, reducing deployment time by 30\% through \textbf{automation}}
-        \resumeItem{Conducted \textbf{API automation testing} using \textbf{Postman} and \textbf{Rest Assured}, applying robust validation techniques, improving test reliability by 50\%}
-        \resumeItem{Identified and documented software defects using \textbf{JIRA} and \textbf{Trello}, leading to a 25\% reduction in bug resolution time}
-        \resumeItem{Integrated \textbf{Allure} for detailed test reporting and automated notifications on \textbf{Slack} using custom templates, enhancing reporting efficiency by 25\%}
-        \resumeItem{\textbf{Containerized} testing environments using \textbf{Docker} and deployed on \textbf{Kubernetes} clusters for scalable test execution}
-      \resumeItemListEnd
+    \resumeJobCompact
+      {SDET \& Operations Intern}{Frugal Testing}{10/2023 -- 09/2024}{Hyderabad}
+      \resumeExpListStart
+        \resumeExpItem{Built and ran \textbf{Selenium}/\textbf{TestNG} web and \textbf{API} automation in \textbf{Java}, lifting test coverage \textbf{40\%}.}
+        \resumeExpItem{Implemented \textbf{CI/CD} with \textbf{GitHub Actions}, cutting deployment time \textbf{30\%} via repeatable pipelines and automation.}
+        \resumeExpItem{Automated APIs with \textbf{Postman} and \textbf{Rest Assured}, improving suite reliability \textbf{50\%} through stronger validation and stability fixes.}
+        \resumeExpItem{Triaged and tracked defects in \textbf{JIRA}/\textbf{Trello}, contributing to a \textbf{25\%} reduction in bug resolution time through clearer ownership and reporting.}
+        \resumeExpItem{Integrated \textbf{Allure} reporting and \textbf{Slack} notifications (custom templates), improving reporting efficiency \textbf{25\%}.}
+        \resumeExpItem{\textbf{Containerized} test environments with \textbf{Docker} and executed suites on \textbf{Kubernetes} for scalable, parallel test runs.}
+      \resumeExpListEnd
 
-    \resumeSubheading
-      {Security Intern}{Jun 2021 -- Jul 2021}
-      {Gurugram Police}{Gurugram}
-      \resumeItemListStart
-        \resumeItem{Conducted \textbf{penetration testing} using \textbf{BurpSuite}, \textbf{Nmap}, and \textbf{Metasploit} to identify security \textbf{vulnerabilities}}
-      \resumeItemListEnd
+    \resumeJobCompact
+      {Security Intern}{Gurugram Police}{06/2021 -- 07/2021}{Gurugram}
+      \resumeExpListStart
+        \resumeExpItem{Supported security assessments with \textbf{penetration testing} using \textbf{Burp Suite}, \textbf{Nmap}, and \textbf{Metasploit} to identify \textbf{vulnerabilities} and document findings.}
+      \resumeExpListEnd
 
   \resumeSubHeadingListEnd
 
