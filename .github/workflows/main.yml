@@ -25,6 +25,7 @@ jobs:
             resumes/Neeraj_Singh_Resume.tex
             resumes/Neeraj_Singh_Resume_Security.tex
             resumes/Neeraj_Singh_Resume_devops.tex
+          work_in_root_file_dir: true
           
       - name: Commit PDF
         run: |
