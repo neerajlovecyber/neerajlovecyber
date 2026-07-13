@@ -1,0 +1,272 @@
+% A4 is slightly taller than US Letter (~11.7" vs 11"). For US-only jobs, use letterpaper.
+\documentclass[a4paper,11pt]{article}
+\usepackage{iftex}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+% Compact sans like typical Word CVs (Calibri / Segoe). Source Sans is wider and feels more “spread out”.
+\ifPDFTeX
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\microtypesetup{nopatch=footnote}
+\input{glyphtounicode}
+\else
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{Calibri}{%
+  \setmainfont{Calibri}[Scale=0.96]%
+}{%
+  \IfFontExistsTF{Segoe UI}{%
+    \setmainfont{Segoe UI}[Scale=0.96]%
+  }{%
+    \IfFontExistsTF{Arial}{%
+      \setmainfont{Arial}[Scale=0.96]%
+    }{%
+      \IfFontExistsTF{Source Sans 3}{%
+        \setmainfont{Source Sans 3}[Scale=0.94]%
+      }{%
+        \setmainfont{Source Sans Pro}[Scale=0.94]%
+      }%
+    }%
+  }%
+}%
+\fi
+\usepackage{setspace}
+\setstretch{0.99}
+
+% Define professional colors: deep navy text with a restrained teal accent for a modern security-focused look.
+\definecolor{primarycolor}{HTML}{0F172A}
+\definecolor{accentcolor}{HTML}{0F766E}
+\definecolor{textgray}{HTML}{334155}
+\definecolor{mutedcolor}{HTML}{64748B}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{5pt}
+
+% Adjust margins (wider/taller type area for more content per page)
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\hypersetup{colorlinks=true, urlcolor=accentcolor, linkcolor=accentcolor}
+
+% Section formatting (section titles in accent blue, rule matches)
+% Uniform gap above each section and below the rule (matches rhythm across blocks)
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\titleformat{\section}{
+  \bfseries\raggedright\large\color{accentcolor}
+}{}{0em}{}[{%
+    \color{accentcolor}%
+    \titleline{\leaders\hrule height 0.6pt\hfill}%
+}]
+
+% Ensure that generate pdf is machine readable/ATS parsable (pdfLaTeX only)
+\ifdefined\pdfgentounicode
+\pdfgentounicode=1
+\fi
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+\item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}
+\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\color{primarycolor}#1} & \color{textgray}#2 \\
+    \textit{\small#3} & \textit{\small \color{textgray}#4} \\
+  \end{tabular*}\vspace{-9pt}
+}
+
+% Compact job line: title first; company and location together, dates flush right
+\newcommand{\resumeJobCompact}[4]{%
+\item[]
+  {\small\textbf{\color{primarycolor}#1}}\\[-1pt]
+  \begin{tabular*}{\textwidth}[t]{@{}>{\raggedright\arraybackslash}p{\dimexpr\textwidth - 1.75in\relax}@{\extracolsep{\fill}}r@{}}
+    \small #2 $|$ \faMapMarker*\ #4 & \small\color{textgray}\faCalendar*\ #3 \\
+  \end{tabular*}\par\vspace{1pt}
+}
+\newcommand{\resumeExpItem}[1]{
+\item {\small #1}}
+% Tight bullet: same font size as body, small labelsep, parleft so wrapped lines align under text
+\newcommand{\resumeExpListStart}{
+  \begin{itemize}[
+        align=parleft,
+        leftmargin=0.12in,
+        labelindent=0pt,
+        itemindent=0pt,
+        label={\small\textbullet},
+        labelwidth=0.45em,
+        labelsep=0.22em,
+        itemsep=2pt,
+        topsep=0pt,
+        parsep=0pt,
+        partopsep=0pt
+    ]}
+    \newcommand{\resumeExpListEnd}{
+  \end{itemize}\vspace{-2pt}}
+
+\newcommand{\resumeSubSubheading}[2]{
+\item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+% Full-width project line (no right-hand dates column)
+\newcommand{\resumeProjectHeading}[1]{%
+\item[]
+  {\raggedright\small #1\par}\vspace{1pt}%
+}
+
+\newcommand{\skillSep}{\hspace{0.35em}\textbullet\hspace{0.35em}}
+\newcommand{\contactSep}{\hspace{0.45em}{\color{mutedcolor}\textbar}\hspace{0.45em}}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Flush with \section titles (no extra list indent); nested exp bullets keep their own margin
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=0pt, itemindent=0pt, label={}, labelwidth=0pt, labelsep=0pt]}
+    \newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}}
+\newcommand{\resumeItemListStart}{
+\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\color{accentcolor}%
+    \ifPDFTeX
+    \bfseries\fontsize{26}{31}\selectfont Neeraj Singh%
+    \else
+    {\Huge
+      \IfFontExistsTF{Calibri}{\fontspec{Calibri}[FakeBold=1.35]{Neeraj Singh}}{%
+        \IfFontExistsTF{Segoe UI}{\fontspec{Segoe UI}[FakeBold=1.35]{Neeraj Singh}}{%
+          \IfFontExistsTF{Arial}{\fontspec{Arial}[FakeBold=1.35]{Neeraj Singh}}{%
+      \textbf{Neeraj Singh}}}}%
+      \fi
+    } \\ \vspace{4pt}
+    {\Large \textbf{DevOps \& Cybersecurity Engineer}} \\ \vspace{2pt}
+    {\small\color{mutedcolor}\textbf{Cloud Security \textbullet\ Threat Detection \textbullet\ CI/CD Automation}} \\ \vspace{6pt}
+    \small {\color{accentcolor}\faMapMarker*}\ Delhi NCR, India \contactSep
+    {\color{accentcolor}\faPhone}\ +91 7988815263 \contactSep
+    {\color{accentcolor}\faEnvelope}\ \href{mailto:neerajlovecyber@gmail.com}{neerajlovecyber@gmail.com} \contactSep
+    {\color{accentcolor}\faLinkedin}\ \href{https://www.linkedin.com/in/neerajlovecyber/}{linkedin.com/in/neerajlovecyber}
+  \end{center}
+  \vspace{2pt}
+
+  %-----------SUMMARY-----------
+  \section{Summary}
+  {\small
+    \noindent
+    \textbf{DevOps and Cybersecurity Engineer} with \textbf{2+ years of combined professional and internship experience} securing cloud-native systems across \textbf{AWS}, Linux, CI/CD, and containers. Strong in \textbf{GitHub Actions}, \textbf{Docker}, \textbf{Kubernetes}, \textbf{Terraform}, \textbf{Ansible}, \textbf{Wazuh SIEM}, SOC triage, vulnerability assessment, centralized logging, and security automation. Known for clear \textbf{communication}, careful incident documentation, cross-functional \textbf{teamwork}, and ownership of remediation follow-through.
+  \par}
+
+  %-----------SKILLS-----------
+  \section{Skills}
+  {\small
+    \noindent DevSecOps\skillSep Wazuh SIEM\skillSep SOC Triage\skillSep Incident Response\skillSep Threat Containment\skillSep Vulnerability Assessment\skillSep Security Auditing\\[1pt]
+    AWS\skillSep CI/CD Pipelines\skillSep GitHub Actions\skillSep Docker\skillSep Kubernetes\skillSep Terraform\skillSep Ansible\skillSep Linux Administration\\[1pt]
+    ELK/OpenSearch\skillSep Centralized Logging\skillSep Python Scripting\skillSep Shell Scripting\skillSep YARA\skillSep DNS/TLS Security\skillSep Platform Security\\[1pt]
+    Communication\skillSep Teamwork\skillSep Ownership\skillSep Incident Documentation\skillSep Stakeholder Updates\skillSep Remediation Follow-Through
+  \par}
+
+  %-----------EXPERIENCE-----------
+  \section{Professional Experience}
+  \resumeSubHeadingListStart
+
+  \resumeJobCompact
+  {Cybersecurity \& DevOps Engineer}{xIoTz Private Limited}{Nov 2024 -- Present}{Remote, Delhi NCR | Company base: Bengaluru}
+  \resumeExpListStart
+  \resumeExpItem{\textbf{Secure Cloud Operations:} Co-designed a cyber assurance platform on \textbf{AWS EC2}, improving visibility for \textbf{10 cloud workloads} through provisioning, hardening, logging, monitoring, and security controls.}
+  \resumeExpItem{\textbf{Infrastructure Automation:} Built reproducible Windows/Linux deployment workflows, reducing setup drift through scripted health checks, configuration baselines, and repeatable controls.}
+  \resumeExpItem{\textbf{Threat Detection \& Response:} Created custom \textbf{Wazuh Active Response} modules to automate containment, isolation, and remediation while reducing manual response steps.}
+  \resumeExpItem{\textbf{Security Automation \& Risk Auditing:} Built workflows for asset discovery, baseline checks, evidence collection, and remediation tracking; documented findings and partnered with engineers.}
+  \resumeExpListEnd
+
+  \resumeJobCompact
+  {Automation \& CI/CD Intern}{Frugal Testing}{2023 -- 2024}{Hyderabad, India}
+  \resumeExpListStart
+  \resumeExpItem{\textbf{Secure Pipeline Automation:} Implemented \textbf{CI/CD} pipelines with \textbf{GitHub Actions}, adding repeatable checks and release validation while reducing manual deployment overhead by \textbf{30\%}.}
+  \resumeExpItem{\textbf{Containerization \& Orchestration:} Containerized test environments with \textbf{Docker} and automated distributed suite execution on \textbf{Kubernetes}, enabling \textbf{parallel test runs} and improving release validation consistency by \textbf{30\%}.}
+  \resumeExpItem{\textbf{Automation \& Release Visibility:} Programmed web/API validation with \textbf{Java}, \textbf{Selenium}, and \textbf{Postman}; collaborated with QA/engineering in \textbf{Jira} and shipped \textbf{Slack} alerts.}
+  \resumeExpListEnd
+
+  \resumeSubHeadingListEnd
+
+  %-----------PROJECTS-----------
+  \section{Projects}
+  \resumeSubHeadingListStart
+  \resumeProjectHeading
+  {\textbf{Cyber Assurance Platform} --- Unified \textbf{SOC} \& \textbf{CSPM} Layer, Developed an AWS-based security operations plane for detection, triage, centralized logging, cloud posture checks, workload telemetry, secure retention, and event queues using \textbf{Docker}, \textbf{Valkey/Redis}, and \textbf{ELK/OpenSearch}.}
+  \resumeProjectHeading
+  {\textbf{\href{https://watchtower-web.neerajsec.workers.dev/}{WatchTower Security Scanner}} --- Instant Domain Risk Scorecard, Built a domain scanner that audits \textbf{DNS}, \textbf{TLS}, HTTP headers, WAF exposure, open ports, WHOIS, blocklists, vendors, and threat signals; generates security grades, weighted scores, severity counts, vendor scorecards, and actionable findings.}
+  \resumeProjectHeading
+  {\textbf{Security Audit360} --- Baseline \& Audit Console, Developed a security audit application for 40+ digital asset signals including DNS, domains, public IPs, and SSL/TLS certificates; generated baseline risk reports for compliance, exposure review, and operational remediation.}
+  \resumeSubHeadingListEnd
+
+  %-----------CERTIFICATES-----------
+  \section{Certificates}
+  {\small
+    \setlength{\tabcolsep}{10pt}
+    \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+      \begin{minipage}[t]{\linewidth}
+        \faCertificate\ \textbf{Certified Ethical Hacker (CEH)}\\[2pt]
+        By EC-Council
+      \end{minipage} &
+      \begin{minipage}[t]{\linewidth}
+        \faCertificate\ \textbf{Jr. Penetration Tester (eJPT)}\\[2pt]
+        By eLearnSecurity
+      \end{minipage} &
+      \begin{minipage}[t]{\linewidth}
+        \faCertificate\ \textbf{AWS \& DevOps Fundamentals}\\[2pt]
+        By KodeKloud
+      \end{minipage} \\
+    \end{tabularx}
+  \par}
+
+  %-----------EDUCATION-----------
+  \section{Education}
+  {\small\noindent
+    \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xr@{}}
+      \textbf{Bachelor of Technology in Computer Science and Engineering} $|$ CGPA -- 8.29 & \faCalendar*\ Aug 2020 -- Oct 2024 \\
+      Lovely Professional University $|$ \faMapMarker*\ Punjab & \\
+    \end{tabularx}
+  \par}
+
+  \end{document}

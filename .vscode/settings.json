@@ -1,0 +1,14 @@
+{
+    "cloudlatex.enabled": true,
+    "latexOneClick.autoCompileOnSave": true,
+    "latexOneClick.offlineOnly": false,
+    "latexOneClick.syncTeX": true,
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.log": true,
+        "**/*.out": true,
+        "**/*.synctex.gz": true
+    }
+}
