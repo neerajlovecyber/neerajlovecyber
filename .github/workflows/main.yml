@@ -5,10 +5,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'resumes/Neeraj_Singh_Resume.tex'
-      - 'resumes/Neeraj_Singh_Resume_Security.tex'
-      - 'resumes/Neeraj_Singh_Resume_devops.tex'
 
 jobs:
   build:
