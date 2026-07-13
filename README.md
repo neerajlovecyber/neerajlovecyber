@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Header Image" src="https://github.com/neerajlovecyber/neerajlovecyber/blob/master/Githubheader.png" />
+  <img alt="Header Image" src="assets/Githubheader.png" />
 </p>
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%230EF746&size=38&center=true&width=1000&height=150&lines=Hi+there+%F0%9F%91%8B;I+am+Neeraj+Singh+(@NeerajLoveCyber);I+am+a+Cyber+Security+Student)](https://git.io/typing-svg)
@@ -34,8 +34,13 @@
 # 🔐 Certificates: 
 
 </summary>
-<img src="https://github.com/neerajlovecyber/neerajlovecyber/blob/43f580820936689b649f0ac17d0a541434995ea9/image.png" width="400" height="300" />
+<img src="assets/image.png" width="400" height="300" />
 </details>
+
+## 📝 Resumes:
+* 📄 **[General Resume (DevOps & Cybersecurity)](./resumes/Neeraj_Singh_Resume.pdf)**
+* 🛡️ **[Cybersecurity Resume](./resumes/Neeraj_Singh_Resume_Security.pdf)**
+* ⚙️ **[DevOps Resume](./resumes/Neeraj_Singh_Resume_devops.pdf)**
 
 <details>
 <summary>
@@ -53,13 +58,3 @@
 
 
 [![](https://visitcount.itsvg.in/api?id=neerajlovecyber&icon=0&color=0)](https://visitcount.itsvg.in)
-
-# 📝 Blog posts :
-<!-- BLOG-POST-LIST:START -->
-- [🔐 Unlocking the Power of Memory Forensics: Your Comprehensive Volatility Cheatsheet](https://neerajlovecyber.com/memory-forensics-volatility-cheatsheet-guide/)
-- [Raw Dump Tool: Empowering Digital Forensics with Memory Dump Analysis](https://neerajlovecyber.com/raw-dump-tool-empowering-digital-forensics-with-memory-dump-analysis/)
-- [Simplify Your QA Testing Process with QA WatchDog](https://neerajlovecyber.com/simplify-your-qa-testing-process-with-qa-watchdog/)
-- [5 Reason to still learn Python in 2023 | World’s Hottest Programming Language](https://neerajlovecyber.com/5-reason-to-learn-python/)
-<!-- BLOG-POST-LIST:END -->
-
-### 🕒 Last Updated:  06 Apr 2024
