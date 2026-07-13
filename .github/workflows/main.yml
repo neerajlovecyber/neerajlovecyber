@@ -22,10 +22,10 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: |
-            resumes/Neeraj_Singh_Resume.tex
-            resumes/Neeraj_Singh_Resume_Security.tex
-            resumes/Neeraj_Singh_Resume_devops.tex
-          work_in_root_file_dir: true
+            Neeraj_Singh_Resume.tex
+            Neeraj_Singh_Resume_Security.tex
+            Neeraj_Singh_Resume_devops.tex
+          working_directory: resumes
           
       - name: Commit PDF
         run: |
